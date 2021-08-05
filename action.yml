@@ -17,6 +17,14 @@ inputs:
   topic:
     description: 'MQTT topic'
     required: true
+  qos:
+    description: "Quality of Service. One of: '0' | '1'"
+    default: 0
+    required: true
+  retain:
+    description: "Retain message"
+    required: true
+    default: false
   username:
     description: 'MQTT username'
     required: false
