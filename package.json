@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "description": "Send a MQTT message from GitHub Actions.",
-  "repository": "git@github.com:juhrlass/mqtt-action.git",
+  "repository": "git@github.com:kanjininja/mqtt-action.git",
   "license": "MIT",
   "author": "Joachim Uhrlaß",
   "scripts": {
