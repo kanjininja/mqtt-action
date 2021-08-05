@@ -1,13 +1,13 @@
 {
   "name": "mqtt-action",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "dist/index.js",
   "description": "Send a MQTT message from GitHub Actions.",
   "repository": "git@github.com:juhrlass/mqtt-action.git",
   "license": "MIT",
   "author": "Joachim Uhrlaß",
   "scripts": {
-    "build": "ncc build app.js",
+    "build": "npx @vercel/ncc build && npx convert-action"
     "test": "standard"
   },
   "dependencies": {
