@@ -1,7 +1,7 @@
 {
   "name": "mqtt-action",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "app.js",
   "description": "Send a MQTT message from GitHub Actions.",
   "repository": "git@github.com:kanjininja/mqtt-action.git",
   "license": "MIT",
