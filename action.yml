@@ -36,7 +36,7 @@ inputs:
     required: true
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'app.js'
 branding:
   icon: 'cast'
   color: 'gray-dark'
