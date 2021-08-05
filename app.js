@@ -5,6 +5,8 @@ const options = {
   protocol: core.getInput('protocol'),
   host: core.getInput('host'),
   port: core.getInput('port'),
+  qos: core.getInput('qos'),
+  retain: core.getInput('retain'),
   username: core.getInput('username'),
   password: core.getInput('password')
 }
@@ -18,7 +20,7 @@ const client = mqtt.connect(options)
 
 client.on('connect', function () {
   console.log('Connected!')
-  client.publish(topic, message, function (err) {
+  client.publish(topic, message, { qos: '1', retain: false }, function (err) {
     if (!err) {
       console.log('Successfully published message to topic')
     } else {
