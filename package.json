@@ -7,7 +7,7 @@
   "license": "MIT",
   "author": "Joachim Uhrlaß",
   "scripts": {
-    "build": "npx @vercel/ncc build && npx convert-action"
+    "build": "npx @vercel/ncc build && npx convert-action",
     "test": "standard"
   },
   "dependencies": {
