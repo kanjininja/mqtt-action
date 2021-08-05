@@ -20,7 +20,8 @@ const client = mqtt.connect(options)
 
 client.on('connect', function () {
   console.log('Connected!')
-  client.publish(topic, message, { qos: '1', retain: false }, function (err) {
+  console.log('qos:'+options.qos+' retain:'+options.retain)
+  client.publish(topic, message, { qos: options.qos, retain: options.retain }, function (err) {
     if (!err) {
       console.log('Successfully published message to topic')
     } else {
