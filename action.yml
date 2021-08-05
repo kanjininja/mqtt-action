@@ -1,42 +1,44 @@
-name: 'MQTT Publish Action'
-description: 'This action publishes a MQTT message from GitHub Actions.'
-author: 'Joachim Uhrlaß'
+name: MQTT Publish Action
+description: This action publishes a MQTT message from GitHub Actions.
+author: Joachim Uhrlaß
 inputs:
   protocol:
-    description: "MQTT server protocol. One of: 'wss' | 'ws' | 'mqtt' | 'mqtts' | 'tcp' | 'ssl' | 'wx' | 'wxs'"
-    default: 'mqtt'
+    description: >-
+      MQTT server protocol. One of: 'wss' | 'ws' | 'mqtt' | 'mqtts' | 'tcp' |
+      'ssl' | 'wx' | 'wxs'
+    default: mqtt
     required: true
   host:
-    description: 'MQTT server host'
-    default: 'localhost'
+    description: MQTT server host
+    default: localhost
     required: true
   port:
-    description: 'MQTT server port'
+    description: MQTT server port
     default: 1883
     required: true
   topic:
-    description: 'MQTT topic'
+    description: MQTT topic
     required: true
   qos:
-    description: "Quality of Service. One of: '0' | '1'"
+    description: 'Quality of Service. One of: ''0'' | ''1'''
     default: 0
     required: true
   retain:
-    description: "Retain message"
+    description: Retain message
     required: true
     default: false
   username:
-    description: 'MQTT username'
+    description: MQTT username
     required: false
   password:
-    description: 'MQTT password'
+    description: MQTT password
     required: false
   message:
-    description: 'Message to send'
+    description: Message to send
     required: true
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: node12
+  main: dist/index.js
 branding:
-  icon: 'cast'
-  color: 'gray-dark'
+  icon: cast
+  color: gray-dark
